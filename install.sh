@@ -13,6 +13,8 @@ elif [ -f /etc/alpine-release ]; then
 # check if centos
 elif [ -f /etc/centos-release ]; then
     sudo yum install pkgconfig gcc libseccomp-devel
+elif cat /etc/os-release | grep -i "aosc" > /dev/null 2>&1 ; then
+	sudo oma install pkg-config gcc libseccomp
 else
     echo "Unsupported distribution"
     exit 1
