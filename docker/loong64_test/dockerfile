@@ -25,7 +25,6 @@ RUN echo "deb http://mirrors.aliyun.com/debian-ports sid main contrib non-free" 
        libsqlite3-0\
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-
 # workdir
 WORKDIR /app
 
@@ -49,7 +48,7 @@ RUN wget -O /opt/node-v20.16.0-linux-loong64.tar.xz https://unofficial-builds.no
 	&& ln -s /opt/node-v20.16.0-linux-loong64/bin/node /usr/local/bin/node \
 	&& rm -f /opt/node-v20.16.0-linux-loong64.tar.xz 
 
-# install golang 1.23.1
+# install golang 1.21
 RUN wget -c https://golang.google.cn/dl/go1.23.1.linux-loong64.tar.gz \
     && tar -C /usr/local -xzf go1.23.1.linux-loong64.tar.gz \
     && ln -s /usr/local/go/bin/go /usr/local/bin/go \

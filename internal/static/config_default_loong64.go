@@ -6,7 +6,7 @@ var DEFAULT_PYTHON_LIB_REQUIREMENTS = []string{
 	"/usr/local/lib/python3.10",
     "/usr/lib/python3.10",
     "/usr/lib/python3",
-	"/usr/lib/loongarch-unknown-linux-gnu",
+	"/usr/lib/loongarch64-linux-gnu",
 	"/etc/ssl/certs/ca-certificates.crt",
     "/etc/nsswitch.conf",
     "/etc/hosts",
